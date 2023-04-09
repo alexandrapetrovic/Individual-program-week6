@@ -1,0 +1,30 @@
+@use '../abstracts/' as *;
+
+
+
+/*
+  --space-unit: 1em;
+  --space-xs:   calc(0.5 * var(--space-unit));
+  --space-sm:   calc(0.75 * var(--space-unit));
+  --space-md:   calc(1.25 * var(--space-unit));
+  --space-lg:   calc(2 * var(--space-unit));
+  --space-xl:   calc(3.25 * var(--space-unit));
+*/
+
+.g-{
+    &1 {
+        gap: $space-1;
+    }
+    &2 {
+        gap: $space-2;
+    }
+    &3 {
+        gap: $space-3;
+    }
+    &4 {
+        gap: $space-4;
+    }
+    &5 {
+        gap: $space-5;
+    }
+}

@@ -1,0 +1,23 @@
+@use '../abstracts/' as *;
+
+
+.clr-primary {
+    color: $blue-700;
+ }
+ 
+ .clr-white {
+     color: $white;
+ }
+ 
+ .clr-black {
+     color: $black;
+ }
+ 
+ .bg-priamry {
+     background-color: $blue-700;
+ }
+ 
+ .bg-black {
+     background-color: $black;
+ }
+ 

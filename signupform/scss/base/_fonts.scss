@@ -1,14 +1,16 @@
 
 @use '../abstracts/' as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
 
-$font-body: 'Merriweather', 'Lato', sans-serif;
+
+$font-body: 'Inter', 'Lato', sans-serif;
 $fw-400: 400;
 $fw-500: 500;
 $fw-700: 700;
-$fw-italic: italic;
-$fw-bold: bold;
-$fw-medium: medium;
-$fw-bold-italic: bold italic;
+$fw-italic: $fw-400;
+$fw-bold: $fw-700;
+$fw-medium: $fw-500;
+$fw-bold-italic: $fw-bold $fw-italic;/* Da li se mogu koristiti varijable na ovaj način?*/
 
 
    

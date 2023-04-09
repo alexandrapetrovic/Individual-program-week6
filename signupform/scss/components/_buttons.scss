@@ -1,25 +1,37 @@
 @use '../base/' as *;
 @use '../abstracts/' as*;
 
-.button-primary {
-    .btn-primary {
-        background-color: $blue-700;
-        color: $white;
-        border: 1px solid $blue-700;
-        @include uppercase-btn ();
-    }  
-    .btn {
+
+    
+    /*.btn {
         background-color: $white;
         color: $black;
         border: 1px solid $blue-500;
         font-weight: $fw-bold;
         @include uppercase-btn();
-        /*.btn-primary {
+        .btn-primary {
             background-color: $blue-700;
             color: $white;
             border: 1px solid $blue-700;
-            @include uppercase-btn ();
-        } */  
+        }  
+        &:active {
+            color: $white;
+            background-color: $blue-700;
+        }
+    }*/
+
+    .btn {
+        border: 1px solid $blue-500;
+        font-weight: $fw-bold;
+        @include uppercase-btn();
+        &.btn-primary {
+            background-color: $blue-700;
+            color: $white;
+            border: 1px solid $blue-700;
+           
+        }
+    
     }
     
-}
+
+    

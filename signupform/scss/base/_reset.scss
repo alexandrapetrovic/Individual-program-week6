@@ -1,5 +1,6 @@
 @forward 'fonts';
 @use '../abstracts/' as *;
+
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -60,3 +61,7 @@
     font-size: 1.25rem;
    }
 
+   a {
+    color: $blue-500;
+    text-decoration: none;
+}

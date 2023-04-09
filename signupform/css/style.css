@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
 /*@mixin uppercase-input () {
     padding: 12px 24px;
     width: 100%;
@@ -7,6 +9,38 @@
     color: $blue-500;
     text-decoration: none;
 }*/
+/*
+--space-unit: 1em;
+--space-xs:   calc(0.5 * var(--space-unit));
+--space-sm:   calc(0.75 * var(--space-unit));
+--space-md:   calc(1.25 * var(--space-unit));
+--space-lg:   calc(2 * var(--space-unit));
+--space-xl:   calc(3.25 * var(--space-unit));
+*/
+/*
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { ... }
+
+// XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width
+*/
+/*$screen-sm: (max-width: 576px);
+$screen-md: (max-width: 768px);
+$screen-lg: (max-width: 992px);
+$screen-xl: (max-width: 1200px);*/
+/* Da li se mogu koristiti varijable na ovaj način?*/
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -67,39 +101,118 @@ h3, .h3 {
   font-size: 1.25rem;
 }
 
-.button-primary .btn-primary {
-  background-color: #004BFF;
-  color: #FFFFFF;
-  border: 1px solid #004BFF;
-  padding: 12px 24px;
-  width: 100%;
-  border-radius: 24px;
-  cursor: pointer;
-}
-.button-primary .btn {
-  background-color: #FFFFFF;
-  color: #000;
-  border: 1px solid #4285F4;
-  font-weight: bold;
-  padding: 12px 24px;
-  width: 100%;
-  border-radius: 24px;
-  cursor: pointer;
-  /*.btn-primary {
-      background-color: $blue-700;
-      color: $white;
-      border: 1px solid $blue-700;
-      @include uppercase-btn ();
-  } */
+a {
+  color: #4285F4;
+  text-decoration: none;
 }
 
 body {
-  font-family: "Merriweather", "Lato", sans-serif;
+  /*font-family: $font-body;*/
   background-color: #F2F6FF;
 }
 
 main {
   padding: 2rem;
+}
+
+/*.btn {
+    background-color: $white;
+    color: $black;
+    border: 1px solid $blue-500;
+    font-weight: $fw-bold;
+    @include uppercase-btn();
+    .btn-primary {
+        background-color: $blue-700;
+        color: $white;
+        border: 1px solid $blue-700;
+    }  
+    &:active {
+        color: $white;
+        background-color: $blue-700;
+    }
+}*/
+.btn {
+  border: 1px solid #4285F4;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 24px;
+  cursor: pointer;
+}
+.btn.btn-primary {
+  background-color: #004BFF;
+  color: #FFFFFF;
+  border: 1px solid #004BFF;
+}
+
+input[type=text] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #4285F4;
+}
+input[type=text]:active {
+  box-shadow: 0px 0px 6px 1px rgba(0, 75, 255, 0.4);
+  border: 1px solid #004BFF;
+}
+input[type=text]::placeholder {
+  color: #4285F4;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: row-reverse;
+  }
+  .container .l-container {
+    width: 100%;
+  }
+}
+
+.l-container {
+  padding: 2rem;
+  width: 60%;
+}
+
+.r-container {
+  width: 40%;
+}
+.r-container .signup-img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.clr-primary {
+  color: #004BFF;
+}
+
+.clr-white {
+  color: #FFFFFF;
+}
+
+.clr-black {
+  color: #000;
+}
+
+.bg-priamry {
+  background-color: #004BFF;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-italic {
+  font-weight: 400;
+}
+
+.fw-normal {
+  font-weight: 500;
 }
 
 .d-flex {
@@ -114,24 +227,240 @@ main {
   text-align: center;
 }
 
-.mr-1 {
-  margin-right: 1rem;
+.align-items {
+  align-items: center;
 }
 
+.place-items-center {
+  place-items: center;
+}
+
+/*
+  --space-unit: 1em;
+  --space-xs:   calc(0.5 * var(--space-unit));
+  --space-sm:   calc(0.75 * var(--space-unit));
+  --space-md:   calc(1.25 * var(--space-unit));
+  --space-lg:   calc(2 * var(--space-unit));
+  --space-xl:   calc(3.25 * var(--space-unit));
+*/
+.m-1 {
+  margin: 0.5rem;
+}
+.m-2 {
+  margin: 0.75rem;
+}
+.m-3 {
+  margin: 1.25rem;
+}
+.m-4 {
+  margin: 2rem;
+}
+.m-5 {
+  margin: 3.25rem;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+.mt-2 {
+  margin-top: 0.75rem;
+}
 .mt-3 {
-  margin-top: 3rem;
+  margin-top: 1.25rem;
+}
+.mt-4 {
+  margin-top: 2rem;
+}
+.mt-5 {
+  margin-top: 3.25rem;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  padding: 6rem;
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+.mb-2 {
+  margin-bottom: 0.75rem;
+}
+.mb-3 {
+  margin-bottom: 1.25rem;
+}
+.mb-4 {
+  margin-bottom: 2rem;
+}
+.mb-5 {
+  margin-bottom: 3.25rem;
 }
 
-.l-container {
+.mx-1 {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+.mx-2 {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+.mx-3 {
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
+}
+.mx-4 {
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+.mx-5 {
+  margin-right: 3.25rem;
+  margin-left: 3.25rem;
+}
+
+.my-1 {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.my-2 {
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+}
+.my-3 {
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+}
+.my-4 {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.my-5 {
+  margin-bottom: 3.25rem;
+  margin-top: 3.25rem;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+.p-2 {
+  padding: 0.75rem;
+}
+.p-3 {
+  padding: 1.25rem;
+}
+.p-4 {
   padding: 2rem;
-  width: 60%;
-  /*height: 606px;*/
+}
+.p-5 {
+  padding: 3.25rem;
+}
+
+.pt-1 {
+  padding-top: 0.5rem;
+}
+.pt-2 {
+  padding-top: 0.75rem;
+}
+.pt-3 {
+  padding-top: 1.25rem;
+}
+.pt-4 {
+  padding-top: 2rem;
+}
+.pt-5 {
+  padding-top: 3.25rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.5rem;
+}
+.pb-2 {
+  padding-bottom: 0.75rem;
+}
+.pb-3 {
+  padding-bottom: 1.25rem;
+}
+.pb-4 {
+  padding-bottom: 2rem;
+}
+.pb-5 {
+  padding-bottom: 3.25rem;
+}
+
+.px-1 {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+.px-2 {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+.px-3 {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
+.px-4 {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.px-5 {
+  padding-right: 3.25rem;
+  padding-left: 3.25rem;
+}
+
+.py-1 {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+.py-2 {
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+}
+.py-3 {
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+}
+.py-4 {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+.py-5 {
+  padding-bottom: 3.25rem;
+  padding-top: 3.25rem;
+}
+
+.w-25 {
+  width: 25%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-80 {
+  width: 80%;
+}
+.w-100 {
+  width: 100%;
+}
+
+/*
+  --space-unit: 1em;
+  --space-xs:   calc(0.5 * var(--space-unit));
+  --space-sm:   calc(0.75 * var(--space-unit));
+  --space-md:   calc(1.25 * var(--space-unit));
+  --space-lg:   calc(2 * var(--space-unit));
+  --space-xl:   calc(3.25 * var(--space-unit));
+*/
+.g-1 {
+  gap: 0.5rem;
+}
+.g-2 {
+  gap: 0.75rem;
+}
+.g-3 {
+  gap: 1.25rem;
+}
+.g-4 {
+  gap: 2rem;
+}
+.g-5 {
+  gap: 3.25rem;
 }
 
 .signup-form {
@@ -158,63 +487,15 @@ main {
   color: #939EC5;
 }
 
-.signup-input {
-  /*@include uppercase-input ();*/
-  padding: 12px 24px;
-  width: 100%;
-  border: 1px solid #4285F4;
-}
-
-.btn {
-  background-color: #FFFFFF;
-  color: #000;
-  border: 1px solid #4285F4;
-  font-weight: bold;
-  padding: 12px 24px;
-  width: 100%;
-  border-radius: 24px;
-  cursor: pointer;
-  /*.btn-primary {
-      background-color: $blue-700;
-      color: $white;
-      border: 1px solid $blue-700;
-      @include uppercase-btn ();
-  } */
-}
-.btn:active {
-  color: #FFFFFF;
-  background-color: #004BFF;
-}
-
-.btn-primary {
-  background-color: #004BFF;
-  color: #FFFFFF;
-  border: 1px solid #004BFF;
-  padding: 12px 24px;
-  width: 100%;
-  border-radius: 24px;
-  cursor: pointer;
-}
-
-a {
-  color: #4285F4;
-  text-decoration: none;
-}
-
+/*.signup-input {
+    padding: 12px 24px;
+    width: 100%;
+    border: 1px solid $blue-500;
+}*/
 .form-footer {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-}
-
-.r-container {
-  width: 40%;
-}
-.r-container .signup-img {
-  /*background-image: url('./images/visual.png');
-  background-size: cover;
-  background-repeat: repeat;*/
-  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

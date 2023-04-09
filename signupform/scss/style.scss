@@ -2,50 +2,11 @@
 @use './base/' as *;
 @use './components/' as *;
 @use './layout/' as *;
+@use './utils/' as *;
 
 
 
-body {
-    font-family: $font-body;
-    background-color: $bg-color;
-}
 
-main {
-    padding: 2rem;
-}
-
-.d-flex {
-    display: flex;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.mr-1 {
-    margin-right: 1rem;
-}
-
-.mt-3 {
-    margin-top: 3rem;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    padding: 6rem;
-}
-
-.l-container {
-   padding: 2rem;
-    width: 60%;
-    /*height: 606px;*/
-    
-}
 
 .signup-form {
     display: flex;
@@ -71,42 +32,11 @@ main {
     }
 }
 
-.signup-input {
-    /*@include uppercase-input ();*/
+/*.signup-input {
     padding: 12px 24px;
     width: 100%;
     border: 1px solid $blue-500;
-}
-
-.btn {
-    background-color: $white;
-    color: $black;
-    border: 1px solid $blue-500;
-    font-weight: $fw-bold;
-    @include uppercase-btn();
-    &:active {
-        color: $white;
-        background-color: $blue-700;
-    }
-    /*.btn-primary {
-        background-color: $blue-700;
-        color: $white;
-        border: 1px solid $blue-700;
-        @include uppercase-btn ();
-    } */  
-}
-
-.btn-primary {
-    background-color: $blue-700;
-    color: $white;
-    border: 1px solid $blue-700;
-    @include uppercase-btn ();
-}
-
-a {
-    color: $blue-500;
-    text-decoration: none;
-}
+}*/
 
 .form-footer {
     display: flex;
@@ -115,15 +45,6 @@ a {
     
 }
 
-.r-container {
-    width: 40%;
-    .signup-img {
-        /*background-image: url('./images/visual.png');
-        background-size: cover;
-        background-repeat: repeat;*/
-        object-fit:cover;
-    }
-}
 
 
 
